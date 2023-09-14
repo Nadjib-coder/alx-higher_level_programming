@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def print_sorted_dictionary(a_dictionary):
-    _ord = list(a_dictionary.keys())
-    _ord.sort()
-    for x in _ord:
-        print("{}: {}".format(i, a_dictionary.get(x)))
+    list_ord = list(a_dictionary.keys())
+    list_ord.sort()
+    for i in list_ord:
+        print("{}: {}".format(i, a_dictionary.get(i)))
