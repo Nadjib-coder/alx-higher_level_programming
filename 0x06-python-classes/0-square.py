@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-'''hello'''
+"""hello"""
 
 class Square:
-    '''hello'''
+    """hello"""
     pass
