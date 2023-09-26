@@ -2,4 +2,5 @@
 '''hello'''
 
 class Square:
+    '''hello'''
     pass
