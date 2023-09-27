@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-
-
 def safe_function(fct, *args):
-    imoport sys
+    import sys
     try:
         result = fct(*args)
         return result
