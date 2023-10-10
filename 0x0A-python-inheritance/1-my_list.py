@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Module for MYlist class."""
+'''Module for MyList class.'''
 
 
-class Mylist(list):
-    """custom Mylist"""
+class MyList(list):
+    '''Custom MyList class.'''
     def print_sorted(self):
-        """Methid for printing sprted list"""
+        '''Method for printing sorted list.'''
         print(sorted(self))
