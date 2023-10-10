@@ -1,9 +1,9 @@
-#!/use/bin/python3
-"""Module to write a class with public instacne method"""
+#!/usr/bin/python3
+"""a module to creat a class and a method"""
 
 
 class BaseGeometry:
     """a BaseGeometry class"""
-    def area(self):
-        """method to raise an exception"""
-        raise Exception("area() is nit implemented")
+    def area(sefl):
+        """a method to raise an exception"""
+        raise Exception("area() is not implemented")
