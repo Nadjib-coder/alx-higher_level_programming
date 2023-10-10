@@ -1,0 +1,7 @@
+>>> Mylist = __import__('1-my_list').Mylist
+
+Correct Class Type test:
+	>>> ml = Mylist()
+	>>> type(ml) == Mylist
+	True
+
