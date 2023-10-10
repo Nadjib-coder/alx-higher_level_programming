@@ -1,8 +1,8 @@
-1-my_list Module Tests
+The ``1-my_list`` module
 ============================
 
-Using 1-my_list
----------------
+Using ``1-mylist``
+---------------------
 
 Import the Mylist class from the module:
 
