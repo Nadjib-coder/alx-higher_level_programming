@@ -5,4 +5,5 @@
 class BaseGeometry:
     """a BaseGeometry class"""
     def area(self):
-        print("area() is nit implemented")
+        """method to raise an exception"""
+        raise Exception("area() is nit implemented")
