@@ -1,55 +1,76 @@
 The ``1-my_list`` module
 ============================
 
-Using ``1-mylist``
+Using ``1-my_list``
 ---------------------
 
 Import the Mylist class from the module:
+    >>> MyList = __import__('1-my_list').MyList
 
-	>>> MyList = __import__('1-my_list').MyList
+1. check if the type of an instance of Mylist is Mylist :
+    >>> ml = MyList()
+    >>> type(ml) == MyList
+    True
 
-1. Check if the type of an instance of MyList is MyList.
+2. Test if an instance of Mylist is an instance of the built-in list:
+    >>> ml = MyList()
+    >>> isinstance(ml, list)
+    True
 
-	>>> ml = MyList()
-	>>> type(ml) == MyList
-	True
 
-2. Test if an instance of MyList is an instance of the built-in list.
+3. print_sorted method is an instance method:
+    >>> type(MyList.__dict__['print_sorted'])
+    <class 'function'>
 
-	>>> ml = MyList()
-	>>> isinstance(ml, list)
-	True
+4. print_sorted method called via class with no args:
+    >>> ml.__class__.print_sorted()
+    Traceback (most recent call last):
+    TypeError: print_sorted() missing 1 required positional argument: 'self'
 
-3. Test the print_sorted method.
+5. print_sorted method called with 1 arg:
+    >>> ml.print_sorted([4, 2, 5])
+    Traceback (most recent call last):
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
 
-3.1. Create an instance of MyList with a list and check if it's sorted.
+6. print_sorted method called with 2 args:
+    >>> ml.print_sorted([4, 2, 5], 1)
+    Traceback (most recent call last):
+    TypeError: print_sorted() takes 1 positional argument but 3 were given
 
-	>>> ml1 = MyList([2, 10, 1])
-	>>> ml1.print_sorted()
-	[1, 2, 10]
+7. Empty list test:
+    >>> ml = MyList()
+    >>> ml.print_sorted()
+    []
 
-3.2. Create an instance of MyList with a different list.
+8. normal list test:
+    >>> ml = MyList([2, 10, 1])
+    >>> ml.print_sorted()
+    [1, 2, 10]
 
-	>>> ml2 = MyList([1, 4, 2, 3, 5])
-	>>> ml2.print_sorted()
-	[1, 2, 3, 4, 5]
+9. normal list test 2:
+    >>> ml = MyList([1, 4, 2, 3, 5])
+    >>> ml.print_sorted()
+    [1, 2, 3, 4, 5]
 
-3.3. Create an instance of MyList with a list of negative integers.
+10. negative ints list test:
+    >>> ml = MyList([-1000, -98, -232565, 0, -23423434, -123])
+    >>> ml.print_sorted()
+    [-23423434, -232565, -1000, -123, -98, 0]
 
-	>>> ml3 = MyList([-1000, -98, -232565, 0, -23423434, -123])
-	>>> ml3.print_sorted()
-	[-23423434, -232565, -1000, -123, -98, 0]
+11. original list unchanged:
+    >>> ml = MyList([2, 10, 1, -10, 20, 100, 0])
+    >>> ml.print_sorted()
+    [-10, 0, 1, 2, 10, 20, 100]
+    >>> ml
+    [2, 10, 1, -10, 20, 100, 0]
 
-3.4. Create an instance of MyList with a list already in order.
+12. List already in order:
+    >>> ml = MyList([-10, 0, 1, 2, 10, 20, 100])
+    >>> ml.print_sorted()
+    [-10, 0, 1, 2, 10, 20, 100]
 
-	>>> ml4 = MyList([-10, 0, 1, 2, 10, 20, 100])
-	>>> ml4.print_sorted()
-	[-10, 0, 1, 2, 10, 20, 100]
-
-4. Test the append method of MyList.
-
-	>>> ml = MyList()
-	>>> ml.append(10)
-	>>> ml
-	[10]
-
+13. Test append:
+    >>> ml = MyList()
+    >>> ml.append(10)
+    >>> ml
+    [10]
