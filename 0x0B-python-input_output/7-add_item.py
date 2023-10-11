@@ -2,17 +2,15 @@
 """module"""
 
 import sys
-from 5-save_to_json_file import save_to_json_file
-from 6-load_from_json_file import load_from_json_file
+save_to_json = __import__('6-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-JSON_FILENAME = "add_item.json"
-
-arglist = sys.argv[1:]
+arglist = list(sys.argv[1:])
 
 try:
-    old_data = load_from_json_file(JSON_FILENAME)
-except FileNotFoundError:
+    old_data = load_from_json_file('add_item.json')
+except Exception:
     old_data = []
 
 old_data.extend(arglist)
-save_to_json_file(old_data, JSON_FILENAME)
+save_to_json_file(old_data, 'add_item.json')
