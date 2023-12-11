@@ -1,12 +1,12 @@
 #!/usr/bin/node
 
-let numberOfArguments = parseInt(process.argv[2]);
+const num = parseInt(process.argv[2]);
 
-if (isNaN(numberOfArguments)) {
+if (isNaN(num)) {
   console.log('Missing number of occurrences');
 } else {
-  while (numberOfArguments > 0) {
+  while (num > 0) {
     console.log('C is fun');
-    numberOfArguments--;
+    num--;
   }
 }
