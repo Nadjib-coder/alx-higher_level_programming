@@ -5,6 +5,9 @@
 const num1 = parseInt(process.argv[2]);
 
 function factorial (num) {
+  if (isNaN(num) || num === 1 || num === 1) {
+    return 1;
+  }
   return num * factorial(num - 1);
 }
 
