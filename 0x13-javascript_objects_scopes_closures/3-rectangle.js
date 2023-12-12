@@ -8,7 +8,7 @@ class Rectangle {
     }
   }
 
-  print() {
+  print (width, height) {
     for (let i = 0; i < height; i++) {
       let rec = '';
       for (let y = 0; y < width; y++) {
