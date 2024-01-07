@@ -20,7 +20,7 @@ def fetch_status():
 
     print("Body response:")
     print("\t- type:", type(data))
-    print("\t- content:", data.decode('utf-8'))
+    print("\t- content:", repr(data))
     print("\t- utf8 content:", data.decode('utf-8'))
 
 
