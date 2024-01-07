@@ -1,10 +1,12 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 
 import urllib.request
 
 url = 'https://alx-intranet.hbtn.io/status'
+
 with urllib.request.urlopen(url) as response:
     html = response.read()
+
 print("Body response:")
 print("\t- type:", type(html))
 print("\t- content:", html.decode('utf-8'))
