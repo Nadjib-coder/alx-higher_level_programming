@@ -12,7 +12,7 @@ import sys
 
 def get_x_request_id(url):
     """
-    Retrieves the X-Request-Id value from
+    retrieves the X-Request-Id value from
     the response header of a given URL.
 
     Args:
